@@ -9,8 +9,8 @@ app.use(express.json());
 // 处理 POST 请求
 app.post('/api/xai', async (req, res) => {
   const { data } = req.body;
-  const apiKey = 'YOUR_API_KEY'; // 替换为你的实际 API 密钥
-  const apiEndpoint = 'https://api.x.ai/v1/query'; // 确认 X.ai API 的实际端点
+  const apiKey = 'xai-QwBNykVBAziQlTMhjUvtYyCJ0GnGgAy2qmw1UNVjQ3HNpvGPno5TWOIaqeASN96vCfqgF87PPbuMG64X'; // 替换为你的实际 API 密钥
+  const apiEndpoint = 'https://api.x.ai/v1/completions'; // 确认 X.ai API 的实际端点
 
   try {
     const response = await axios.post(apiEndpoint, { data }, {
