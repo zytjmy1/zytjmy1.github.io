@@ -6,7 +6,13 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-<div id="result"></div>
+{% include header.html %}
+
+<div class="container">
+  <h1>我的XAI API示例</h1>
+  <div id="result"></div>
+</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     fetch('https://api.x.ai', {
@@ -16,16 +22,20 @@ document.addEventListener('DOMContentLoaded', function() {
             'Authorization': 'Bearer xai-QwBNykVBAziQlTMhjUvtYyCJ0GnGgAy2qmw1UNVjQ3HNpvGPno5TWOIaqeASN96vCfqgF87PPbuMG64X'
         }
     })
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('result').innerText = JSON.stringify(data);
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
     })
-    .catch(error => console.error('Error:', error));
+    .then(data => {
+        document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('result').innerText = '请求失败，请检查API URL和密钥';
+    });
 });
 </script>
 </body>
 </html>
-
-
-
-
