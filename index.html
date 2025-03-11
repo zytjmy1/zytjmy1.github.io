@@ -6,36 +6,20 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-{% include header.html %}
-
+    <header>
+        <nav>
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/about/">关于我</a></li>
+            <li><a href="/posts/">博客文章</a></li>
+          </ul>
+        </nav>
+      </header>
+      
 <div class="container">
   <h1>我的XAI API示例</h1>
   <div id="result"></div>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch('/api/xai/chat', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                messages: [{ role: "user", content: "你好" }],
-                model: "gpt-4",
-                stream: false,
-                temperature: 0.7
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('result').innerText = JSON.stringify(data, null, 2);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('result').innerText = '请求失败，请检查后端服务';
-        });
-    });
-</script>
 </body>
 </html>
