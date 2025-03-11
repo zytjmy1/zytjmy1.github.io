@@ -1,38 +1,40 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
+require('dotenv').config(); // 读取 .env 文件
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+const API_KEY = process.env.XAI_API_KEY; // 从环境变量获取 API Key
+const API_ENDPOINT = 'https://api.x.ai/v1/chat/completions';
 
-// 使用中间件解析 JSON 请求体
+if (!API_KEY) {
+    console.error('❌ 错误：未设置 XAI_API_KEY 环境变量');
+    process.exit(1);
+}
+
+// 允许跨域请求（如果前端和后端不在同一服务器上）
+app.use(cors());
 app.use(express.json());
 
 // 处理 POST 请求
 app.post('/api/xai/chat', async (req, res) => {
-  const { messages, model, stream, temperature } = req.body;
-  const apiKey = 'xai-QwBNykVBAziQlTMhjUvtYyCJ0GnGgAy2qmw1UNVjQ3HNpvGPno5TWOIaqeASN96vCfqgF87PPbuMG64X'; // 替换为你的实际 API 密钥
-  const apiEndpoint = 'https://api.x.ai/v1/chat/completions'; // 确认 X.ai API 的实际端点
+    try {
+        const response = await axios.post(API_ENDPOINT, req.body, {
+            headers: {
+                'Authorization': `Bearer ${API_KEY}`,
+                'Content-Type': 'application/json'
+            }
+        });
 
-  try {
-    const response = await axios.post(apiEndpoint, {
-      messages,
-      model,
-      stream,
-      temperature
-    }, {
-      headers: {
-        'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json'
-      }
-    });
-
-    res.json(response.data);
-  } catch (error) {
-    console.error('Error calling X.ai API:', error);
-    res.status(500).json({ error: error.message });
-  }
+        res.json(response.data);
+    } catch (error) {
+        console.error('调用 XAI API 失败:', error.response ? error.response.data : error.message);
+        res.status(error.response?.status || 500).json({ error: error.response?.data || '服务器错误' });
+    }
 });
 
 // 启动服务器
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    console.log(`🚀 服务器运行中： http://localhost:${PORT}`);
 });
