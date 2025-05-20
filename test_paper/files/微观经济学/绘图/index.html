@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>绘图 下载</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .downloaded-highlight {
+            background-color: #e0ffe0; /* 淡绿色背景 */
+            border-left: 5px solid #4CAF50; /* 绿色左边框 */
+            padding-left: 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -14,7 +22,6 @@
                 <li><a href="/posts/">博客文章</a></li>
                 <li><a href="/test_paper/files/index.html">南审学习资源下载</a></li>
                 <li><a href="/ads/">相亲广告</a></li>
-
             </ul>
         </nav>
     </header>
@@ -26,7 +33,43 @@
         </ul>
         <h2>文件下载</h2>
         <ul>
-            <li><a href="./kk.png" download>kk.png</a></li><li><a href="./图片.png" download>图片.png</a></li><li><a href="./无标题.jpg" download>无标题.jpg</a></li><li><a href="./无标题.png" download>无标题.png</a></li>
+            
+                <li data-file-path-container="/test_paper/files/files/微观经济学/绘图/kk.png">
+                    <a href="javascript:void(0);"
+                       data-file-path="/test_paper/files/files/微观经济学/绘图/kk.png"
+                       onclick="downloadFileClientSide(this);">
+                       kk.png
+                    </a>
+                    <span id="count_display__test_paper_files_files_微观经济学_绘图_kk_png"> (已点击: 0)</span>
+                </li>
+            
+                <li data-file-path-container="/test_paper/files/files/微观经济学/绘图/图片.png">
+                    <a href="javascript:void(0);"
+                       data-file-path="/test_paper/files/files/微观经济学/绘图/图片.png"
+                       onclick="downloadFileClientSide(this);">
+                       图片.png
+                    </a>
+                    <span id="count_display__test_paper_files_files_微观经济学_绘图_图片_png"> (已点击: 0)</span>
+                </li>
+            
+                <li data-file-path-container="/test_paper/files/files/微观经济学/绘图/无标题.jpg">
+                    <a href="javascript:void(0);"
+                       data-file-path="/test_paper/files/files/微观经济学/绘图/无标题.jpg"
+                       onclick="downloadFileClientSide(this);">
+                       无标题.jpg
+                    </a>
+                    <span id="count_display__test_paper_files_files_微观经济学_绘图_无标题_jpg"> (已点击: 0)</span>
+                </li>
+            
+                <li data-file-path-container="/test_paper/files/files/微观经济学/绘图/无标题.png">
+                    <a href="javascript:void(0);"
+                       data-file-path="/test_paper/files/files/微观经济学/绘图/无标题.png"
+                       onclick="downloadFileClientSide(this);">
+                       无标题.png
+                    </a>
+                    <span id="count_display__test_paper_files_files_微观经济学_绘图_无标题_png"> (已点击: 0)</span>
+                </li>
+            
         </ul>
         <a href="../index.html">返回上级目录</a>
     </main>
@@ -37,5 +80,89 @@
     <img src="/test_paper/QR-code.jpg" alt="微信二维码" style="width:150px;">
 </footer>
 
+
+    <script>
+        // LocalStorage 用于存储每个文件在当前会话中的点击次数
+        const downloadCountsKey = 'download_counts'; 
+        // LocalStorage 用于存储已下载文件的列表
+        const downloadedFilesKey = 'downloaded_files'; 
+
+        // 获取或初始化下载计数对象
+        function getDownloadCounts() {
+            try {
+                return JSON.parse(localStorage.getItem(downloadCountsKey) || '{}');
+            } catch (e) {
+                console.error("解析 download_counts 失败:", e);
+                return {};
+            }
+        }
+
+        // 保存下载计数对象
+        function saveDownloadCounts(counts) {
+            localStorage.setItem(downloadCountsKey, JSON.stringify(counts));
+        }
+
+        // 获取或初始化已下载文件列表
+        function getDownloadedFiles() {
+            try {
+                return JSON.parse(localStorage.getItem(downloadedFilesKey) || '[]');
+            } catch (e) {
+                console.error("解析 downloaded_files 失败:", e);
+                return [];
+            }
+        }
+
+        // 保存已下载文件列表
+        function saveDownloadedFiles(files) {
+            localStorage.setItem(downloadedFilesKey, JSON.stringify(files));
+        }
+
+        // 处理文件下载点击事件（纯前端使用 LocalStorage）
+        function downloadFileClientSide(element) {
+            const filePath = $(element).data('file-path'); 
+            const countDisplayId = `count_display_${filePath.replace(/[^a-zA-Z0-9]/g, '_')}`; // 使用更安全的ID生成方式
+            const listItem = $(element).closest('li'); // 获取包含下载链接的 li 元素
+
+            // 1. 更新下载计数
+            let counts = getDownloadCounts();
+            counts[filePath] = (counts[filePath] || 0) + 1;
+            saveDownloadCounts(counts);
+
+            // 更新页面上显示的点击次数
+            $(`#${countDisplayId}`).text(` (已点击: ${counts[filePath]})`);
+
+            // 2. 标记为已下载并保存到列表
+            let downloadedFiles = getDownloadedFiles();
+            if (!downloadedFiles.includes(filePath)) {
+                downloadedFiles.push(filePath);
+                saveDownloadedFiles(downloadedFiles);
+            }
+            listItem.addClass('downloaded-highlight'); // 添加高亮类
+
+            // 3. 触发文件下载
+            window.location.href = filePath; 
+        }
+
+        // 页面加载完成后，从 LocalStorage 读取并显示所有文件的点击次数和高亮标记
+        $(document).ready(function() {
+            const counts = getDownloadCounts();
+            const downloadedFiles = getDownloadedFiles();
+
+            $('a[data-file-path]').each(function() {
+                const filePath = $(this).data('file-path');
+                const countDisplayId = `count_display_${filePath.replace(/[^a-zA-Z0-9]/g, '_')}`;
+                const listItem = $(this).closest('li');
+
+                // 显示计数
+                const storedCount = counts[filePath] || 0;
+                $(`#${countDisplayId}`).text(` (已点击: ${storedCount})`);
+
+                // 应用高亮
+                if (downloadedFiles.includes(filePath)) {
+                    listItem.addClass('downloaded-highlight');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
