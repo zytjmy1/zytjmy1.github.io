@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食刻汉风：彭城奇遇</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f1e9;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e0dace' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h5v1h-5v9h5v1h-5v9h5v1h-5v9h5v1h-5v9h5v1h-5v9h5v1h-5v9h5v1h-5v9h5v1h-5v9h5v1h-5v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .game-title {
+            font-family: 'ZCOOL KuaiLe', cursive;
+        }
+        .symbol-item-container {
+            position: relative;
+        }
+        .symbol-item {
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+            will-change: transform;
+        }
+        .symbol-item.popping {
+            animation: pop 0.3s ease-out;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.8); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .revenue-float {
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 215, 0, 0.95);
+            color: #333;
+            padding: 1px 5px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            animation: floatUp 0.8s ease-out forwards;
+            white-space: nowrap;
+        }
+        @keyframes floatUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, 10px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -12px);
+            }
+        }
+        .choice-card {
+             transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .choice-card:hover:not(.disabled) {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .choice-card.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div id="game-container" class="w-full max-w-lg mx-auto bg-white/70 backdrop-blur-sm rounded-2xl shadow-2xl p-6 text-gray-800 border-4 border-amber-800/50 relative">
+
+        <header class="text-center mb-4">
+            <h1 class="game-title text-4xl text-amber-900">食刻汉风</h1>
+            <p class="text-amber-800/80">彭城奇遇</p>
+        </header>
+
+        <div class="flex justify-between items-start mb-4">
+             <div id="info-panel" class="grid grid-cols-3 gap-2 text-center bg-amber-100/50 p-2 rounded-lg flex-grow">
+                <div>
+                    <div class="text-xs text-amber-700">天数</div>
+                    <div id="day-counter" class="text-xl font-bold text-amber-900">1</div>
+                </div>
+                <div>
+                    <div class="text-xs text-amber-700">剩余炉数</div>
+                    <div id="spins-left" class="text-xl font-bold text-amber-900">5</div>
+                </div>
+                <div>
+                    <div class="text-xs text-amber-700">营业额 (目标)</div>
+                    <div id="revenue-display" class="text-xl font-bold text-amber-900">¥0 / 40</div>
+                </div>
+            </div>
+             <div id="perks-display" class="flex flex-col items-start ml-2 p-2 bg-green-100/50 rounded-lg w-24">
+                <div class="text-xs text-green-800 font-bold w-full text-center mb-1">全局增益</div>
+                <div id="perks-list" class="flex flex-wrap gap-1 justify-center"></div>
+            </div>
+        </div>
+        
+        <main id="grill-grid" class="grid grid-cols-5 gap-2 mb-4 h-48 bg-gray-700/80 p-3 rounded-lg shadow-inner">
+            <!-- Symbols will be dynamically inserted here -->
+        </main>
+
+        <div id="message-box" class="text-center h-6 mb-2 font-bold text-green-600 transition-opacity duration-300"></div>
+
+        <div id="controls" class="flex flex-col items-center">
+            <button id="spin-button" class="game-title w-full bg-amber-600 text-white text-2xl py-3 rounded-lg shadow-lg hover:bg-amber-700 active:bg-amber-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 disabled:bg-gray-400 disabled:cursor-not-allowed">开一炉 (¥1)</button>
+        </div>
+
+        <!-- Modals -->
+        <div id="modal-container" class="hidden absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-10">
+            <div id="modal-content" class="bg-amber-50 max-w-lg w-full rounded-xl p-6 text-center shadow-2xl">
+                 <!-- Content will be injected here -->
+            </div>
+        </div>
+        
+        <!-- Rules Modal -->
+        <div id="rules-modal" class="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-20">
+            <div class="bg-amber-50 max-w-lg w-full rounded-xl p-8 text-left shadow-2xl">
+                <h2 class="game-title text-3xl text-amber-800 mb-4 text-center">游戏规则</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>游戏目标：</strong>在“剩余炉数”用完前，达到每日的“营业额”目标。</li>
+                    <li><strong>核心操作：</strong>点击【开一炉】按钮，会在烤架上随机出现若干物品。</li>
+                    <li><strong>获得收益：</strong>烤架上的物品会根据自身价值和相邻物品的“协同效应”产生收益。</li>
+                    <li><strong>选择道具：</strong>每开一炉后，你都可以从随机出现的三个选项中，花费金币购买一个新“物品”或永久“增益”。</li>
+                    <li><strong>不断成长：</strong>明智地选择道具，构筑强大的组合，挑战更高的营业额，成为彭城烤串王！</li>
+                </ul>
+                <button id="start-game-button" class="game-title w-full mt-6 bg-green-600 text-white text-2xl py-3 rounded-lg shadow-lg hover:bg-green-700 transition-all duration-200">开始大吉</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // DOM Elements
+            const dayCounter = document.getElementById('day-counter');
+            const spinsLeftDisplay = document.getElementById('spins-left');
+            const revenueDisplay = document.getElementById('revenue-display');
+            const grillGrid = document.getElementById('grill-grid');
+            const messageBox = document.getElementById('message-box');
+            const spinButton = document.getElementById('spin-button');
+            const modalContainer = document.getElementById('modal-container');
+            const modalContent = document.getElementById('modal-content');
+            const perksList = document.getElementById('perks-list');
+            const rulesModal = document.getElementById('rules-modal');
+            const startGameButton = document.getElementById('start-game-button');
+
+            // --- DATA DEFINITIONS ---
+            const SYMBOLS = {
+                yangrou: { id: 'yangrou', name: '羊肉串', emoji: '🍢', type: '物品', itemType: '肉类', baseValue: 3, rarity: 1, cost: 0, description: '基础肉类，价值+3。' },
+                jiucai: { id: 'jiucai', name: '韭菜', emoji: '🥬', type: '物品', itemType: '素菜', baseValue: 2, rarity: 1, cost: 0, description: '基础素菜，价值+2。' },
+                wuhuarou: { id: 'wuhuarou', name: '五花肉', emoji: '🥓', type: '物品', itemType: '肉类', baseValue: 4, rarity: 2, cost: 0, description: '优质肉类，价值+4。' },
+                jinzhengu: { id: 'jinzhengu', name: '金针菇', emoji: '🍄', type: '物品', itemType: '素菜', baseValue: 3, rarity: 2, cost: 0, description: '优质素菜，价值+3。' },
+                kaohu: { id: 'kaohu', name: '烤糊的串', emoji: '🔥', type: '物品', itemType: '负面', baseValue: 0, rarity: 2, cost: 0, description: '效果：随机摧毁一个相邻的物品。', 
+                    effect: (grid, index) => {
+                        const neighbors = getNeighbors(index);
+                        if (neighbors.length > 0) {
+                            const victimIndex = neighbors[Math.floor(Math.random() * neighbors.length)];
+                            if(grid[victimIndex]) {
+                                grid[victimIndex] = null;
+                            }
+                        }
+                        return 0;
+                    }
+                },
+                jichi: { id: 'jichi', name: '鸡翅', emoji: '🍗', type: '物品', itemType: '肉类', baseValue: 5, rarity: 3, cost: 1, description: '高级肉类，价值+5。' },
+                qianzi: { id: 'qianzi', name: '签子', emoji: '🥢', type: '物品', itemType: '工具', baseValue: 1, rarity: 3, cost: 1, description: '效果：每有一个签子，所有签子价值都增加。',
+                    synergy: (grid, index) => {
+                        const count = grid.filter(s => s && s.id === 'qianzi').length;
+                        return count > 1 ? (count * count - count) : 0;
+                    }
+                },
+                ziran: { id: 'ziran', name: '孜然', emoji: '✨', type: '物品', itemType: '佐料', baseValue: 1, rarity: 3, cost: 1, description: '效果：使所有相邻的肉类价值翻倍。',
+                    synergy: (grid, index) => {
+                        let bonus = 0;
+                        getNeighbors(index).forEach(nIndex => {
+                            if (grid[nIndex] && grid[nIndex].itemType === '肉类') {
+                                bonus += grid[nIndex].baseValue;
+                            }
+                        });
+                        return bonus;
+                    }
+                },
+                lajiao: { id: 'lajiao', name: '辣椒粉', emoji: '🌶️', type: '物品', itemType: '佐料', baseValue: 1, rarity: 4, cost: 1, description: '效果：烤架上每有一个物品，就+1金币。',
+                    synergy: (grid, index) => grid.filter(s => s).length -1
+                },
+                dauan: { id: 'dauan', name: '大蒜', emoji: '🧄', type: '物品', itemType: '佐料', baseValue: 1, rarity: 4, cost: 1, description: '效果：每个相邻的素菜，+5金币。',
+                    synergy: (grid, index) => {
+                        let bonus = 0;
+                        getNeighbors(index).forEach(nIndex => {
+                            if (grid[nIndex] && grid[nIndex].itemType === '素菜') bonus += 5;
+                        });
+                        return bonus;
+                    }
+                },
+                zhutan: {id: 'zhutan', name: '竹炭', emoji: '⚫', type: '物品', itemType: '工具', baseValue: 0, rarity: 4, cost: 1, description: '效果：移除所有烤糊的串，每个+3金币。',
+                    effect: (grid, index) => {
+                        let removedCount = 0;
+                        grid.forEach((symbol, i) => {
+                            if(symbol && symbol.id === 'kaohu'){
+                                grid[i] = null;
+                                removedCount++;
+                            }
+                        });
+                        return removedCount * 3;
+                    }
+                },
+                fazhan: { id: 'fazhan', name: '发簪', emoji: '簪', type: '物品', itemType: '汉服', baseValue: 5, rarity: 4, cost: 1, description: '效果：与另一件汉服相邻时，彼此都+10金币。',
+                    synergy: (grid, index) => {
+                        let bonus = 0;
+                        getNeighbors(index).forEach(nIndex => {
+                            if (grid[nIndex] && grid[nIndex].itemType === '汉服') bonus += 10;
+                        });
+                        return bonus;
+                    }
+                },
+                fengshan: { id: 'fengshan', name: '小风扇', emoji: '💨', type: '物品', itemType: '工具', baseValue: 0, rarity: 5, cost: 2, description: '效果：本炉所有产出价值翻倍。',
+                    effect: (grid, index) => 'double'
+                },
+                yupei: { id: 'yupei', name: '玉佩', emoji: '玉', type: '物品', itemType: '汉服', baseValue: 4, rarity: 5, cost: 2, description: '效果：每个相邻的物品，基础价值+2。',
+                     synergy: (grid, index) => getNeighbors(index).filter(nIndex => grid[nIndex]).length * 2
+                },
+                xiangnang: { id: 'xiangnang', name: '香囊', emoji: '香', type: '物品', itemType: '汉服', baseValue: 0, rarity: 5, cost: 2, description: '效果：出现时，因其香气吸引顾客，直接产生+5金币。',
+                    effect: (grid, index) => 5
+                },
+                laomo: { id: 'laomo', name: '烙馍', emoji: '🫓', type: '物品', itemType: '徐州特色', baseValue: 5, rarity: 6, cost: 2, description: '效果：卷走烤架上的一切，并使其价值翻倍！',
+                    effect: (grid, index) => {
+                        let totalValue = 0;
+                        grid.forEach((symbol, i) => {
+                            if (symbol && i !== index) {
+                                totalValue += symbol.baseValue;
+                                grid[i] = null;
+                            }
+                        });
+                        return totalValue * 2;
+                    }
+                },
+                quju: { id: 'quju', name: '曲裾', emoji: '👘', type: '物品', itemType: '汉服', baseValue: 8, rarity: 6, cost: 2, description: '效果：每个相邻的汉文化物品，+25金币。',
+                    synergy: (grid, index) => {
+                        let bonus = 0;
+                        getNeighbors(index).forEach(nIndex => {
+                            if (grid[nIndex] && grid[nIndex].itemType === '汉文化') bonus += 25;
+                        });
+                        return bonus;
+                    }
+                },
+                daxiushan: { id: 'daxiushan', name: '大袖衫', emoji: '衫', type: '物品', itemType: '汉服', baseValue: 2, rarity: 7, cost: 2, description: '效果：挥动大袖，扫清同行的所有物品，每个+3金币。',
+                    effect: (grid, index) => {
+                        let clearedCount = 0;
+                        const row = Math.floor(index / 5);
+                        for (let i = row * 5; i < (row + 1) * 5; i++) {
+                            if (i !== index && grid[i]) {
+                                clearedCount++;
+                                grid[i] = null;
+                            }
+                        }
+                        return clearedCount * 3;
+                    }
+                },
+                hanhuashi: { id: 'hanhuashi', name: '汉画像石', emoji: '🗿', type: '物品', itemType: '汉文化', baseValue: 10, rarity: 7, cost: 2, description: '效果：复制一个相邻的物品。',
+                    effect: (grid, index) => {
+                        let bestNeighbor = null;
+                        let maxVal = -1;
+                        getNeighbors(index).forEach(nIndex => {
+                            if (grid[nIndex] && grid[nIndex].baseValue > maxVal) {
+                                maxVal = grid[nIndex].baseValue;
+                                bestNeighbor = grid[nIndex];
+                            }
+                        });
+                        if (bestNeighbor) {
+                            const emptySlot = grid.findIndex(s => s === null);
+                            if (emptySlot !== -1) grid[emptySlot] = { ...bestNeighbor };
+                        }
+                        return 0;
+                    }
+                },
+                tuopian: { id: 'tuopian', name: '拓片', emoji: '纸', type: '物品', itemType: '汉文化', baseValue: 1, rarity: 5, cost: 1, description: '效果：与汉画像石相邻时，获得其基础价值，并有几率获得一个随机基础物品。',
+                    synergy: (grid, index) => {
+                        let bonus = 0;
+                        getNeighbors(index).forEach(nIndex => {
+                            if (grid[nIndex] && grid[nIndex].id === 'hanhuashi') {
+                                bonus += grid[nIndex].baseValue;
+                                if (Math.random() < 0.5) {
+                                    const emptySlot = grid.findIndex(s => s === null);
+                                    if (emptySlot !== -1) grid[emptySlot] = { ...SYMBOLS.yangrou };
+                                }
+                            }
+                        });
+                        return bonus;
+                    }
+                }
+            };
+
+            const PERKS = {
+                 caidan: {id: 'caidan', name: '菜单', emoji: '📜', type: '增益', cost: 2, description: '效果：永久性，每次进货时，选项+1。'},
+                 xiaoshuazi: {id: 'xiaoshuazi', name: '小刷子', emoji: '🖌️', type: '增益', cost: 2, description: '效果：永久性，有33%几率将烤糊的串变为韭菜。'},
+                 roushizhuyi: {id: 'roushizhuyi', name: '肉食主义', emoji: '🍖', type: '增益', cost: 1, description: '效果：永久性，所有肉类基础价值+1。'},
+                 sushiaihaozhe: {id: 'sushiaihaozhe', name: '素食爱好者', emoji: '🥕', type: '增益', cost: 1, description: '效果：永久性，所有素菜基础价值+2。'},
+                 chengbenjieyue: {id: 'chengbenjieyue', name: '成本节约', emoji: '💰', type: '增益', cost: 2, description: '效果：永久性，每次开炉费用-1（最低为0）。'},
+                 guishantongtu: {id: 'guishantongtu', name: '龟山通途', emoji: '隧', type: '增益', cost: 2, description: '效果：永久性，连接烤架最左侧和最右侧的格子，使它们视为相邻。'}
+            }
+
+            let gameState = {};
+
+            function initGame() {
+                gameState = {
+                    day: 1,
+                    spins: 5, 
+                    revenue: 0,
+                    goal: 40,
+                    spinCost: 1,
+                    playerSymbols: ['yangrou', 'jiucai'], 
+                    gridSize: 15,
+                    isGameOver: false,
+                    activePerks: [],
+                };
+                updateUI();
+                spinButton.disabled = false;
+                grillGrid.innerHTML = '';
+            }
+            
+            function startGame() {
+                rulesModal.classList.add('hidden');
+                initGame();
+                modalContainer.classList.add('hidden');
+            }
+
+            function startNextDay() {
+                gameState.day++;
+                gameState.spins = 5 + (gameState.day - 1);
+                gameState.revenue = 0;
+                gameState.goal = Math.floor(gameState.goal * 1.7); 
+                modalContainer.classList.add('hidden');
+                spinButton.disabled = false;
+                grillGrid.innerHTML = '';
+                updateUI();
+            }
+            
+            function getNeighbors(index) {
+                const neighbors = [];
+                const cols = 5;
+                const rows = 3;
+                const row = Math.floor(index / cols);
+                const col = index % cols;
+
+                for (let i = -1; i <= 1; i++) {
+                    for (let j = -1; j <= 1; j++) {
+                        if (i === 0 && j === 0) continue;
+                        let newRow = row + i;
+                        let newCol = col + j;
+
+                        if (gameState.activePerks.find(p => p.id === 'guishantongtu')) {
+                            if (newCol < 0) newCol = cols - 1;
+                            if (newCol >= cols) newCol = 0;
+                        }
+
+                        if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols) {
+                            neighbors.push(newRow * cols + newCol);
+                        }
+                    }
+                }
+                return neighbors;
+            }
+
+            function handleSpin() {
+                if (gameState.isGameOver || gameState.spins <= 0) return;
+                
+                spinButton.disabled = true;
+                
+                const currentSpinCost = Math.max(0, gameState.spinCost - (gameState.activePerks.find(p => p.id === 'chengbenjieyue') ? 1 : 0));
+                gameState.revenue -= currentSpinCost;
+                gameState.spins--;
+                
+                const currentGridSymbols = Array(gameState.gridSize).fill(null);
+                const numItemsToSpawn = 3 + Math.floor(Math.random() * 4); 
+                const availableSlots = Array.from(Array(gameState.gridSize).keys());
+
+                const weightedSymbolPool = gameState.playerSymbols.flatMap(id => {
+                    const rarity = SYMBOLS[id].rarity;
+                    const weight = Math.pow(1 / rarity, 2);
+                    return Array(Math.ceil(100 * weight)).fill(id);
+                });
+
+                for (let i = 0; i < numItemsToSpawn; i++) {
+                    if (availableSlots.length === 0) break;
+                    const randomSlotIndex = Math.floor(Math.random() * availableSlots.length);
+                    const slotToFill = availableSlots.splice(randomSlotIndex, 1)[0];
+                    let randomId = weightedSymbolPool[Math.floor(Math.random() * weightedSymbolPool.length)];
+                    if (randomId === 'kaohu' && gameState.activePerks.find(p => p.id === 'xiaoshuazi') && Math.random() < 0.33) {
+                        randomId = 'jiucai';
+                        showMessage('🖌️ 小刷子显灵了！', 'good');
+                    }
+                    currentGridSymbols[slotToFill] = { ...SYMBOLS[randomId] };
+                }
+
+                const { totalRevenue, valueGrid } = calculateRevenue(currentGridSymbols);
+                gameState.revenue += totalRevenue;
+                
+                updateGridDisplay(currentGridSymbols, valueGrid);
+                messageBox.textContent = `本炉总计: +${Math.round(totalRevenue)}`;
+                updateUI();
+                
+                setTimeout(showItemSelection, 1500);
+            }
+            
+            function calculateRevenue(grid) {
+                let tempGrid = [...grid];
+                let valueGrid = Array(gameState.gridSize).fill(0);
+                let finalMultiplier = 1;
+
+                tempGrid.forEach((symbol, index) => {
+                    if (symbol && symbol.effect) {
+                        const effectResult = symbol.effect(tempGrid, index);
+                        if(effectResult === 'double') {
+                            finalMultiplier *= 2;
+                        } else if (typeof effectResult === 'number') {
+                            valueGrid[index] += effectResult;
+                        }
+                    }
+                });
+
+                tempGrid.forEach((symbol, index) => {
+                    if (symbol) {
+                        let value = symbol.baseValue;
+                        if(symbol.itemType === '肉类' && gameState.activePerks.find(p => p.id === 'roushizhuyi')) value += 1;
+                        if(symbol.itemType === '素菜' && gameState.activePerks.find(p => p.id === 'sushiaihaozhe')) value += 2;
+                        valueGrid[index] += value;
+                    }
+                });
+
+                tempGrid.forEach((symbol, index) => {
+                    if (symbol && symbol.synergy) {
+                        valueGrid[index] += symbol.synergy(tempGrid, index);
+                    }
+                });
+                
+                let totalRevenue = 0;
+                valueGrid.forEach((value, index) => {
+                    const finalValue = Math.round(value * finalMultiplier);
+                    valueGrid[index] = finalValue;
+                    totalRevenue += finalValue;
+                });
+                
+                return { totalRevenue, valueGrid };
+            }
+
+            function updateGridDisplay(symbols, values) {
+                 grillGrid.innerHTML = '';
+                 symbols.forEach((symbol, index) => {
+                    const cellContainer = document.createElement('div');
+                    cellContainer.className = 'symbol-item-container bg-amber-200/50 rounded-lg flex items-center justify-center';
+                    
+                    if (symbol) {
+                        cellContainer.innerHTML = `<div class="symbol-item text-4xl popping">${symbol.emoji}</div>`;
+                        if (values[index] > 0) {
+                            const valueDiv = document.createElement('div');
+                            valueDiv.className = 'revenue-float';
+                            valueDiv.textContent = `+${values[index]}`;
+                            cellContainer.appendChild(valueDiv);
+                        }
+                    }
+                    grillGrid.appendChild(cellContainer);
+                });
+            }
+
+            function endDay() {
+                modalContainer.classList.remove('hidden');
+                let contentHTML = '';
+                if (gameState.revenue >= gameState.goal) {
+                    contentHTML = `
+                        <h2 class="game-title text-4xl text-green-600 mb-2">今日大卖！</h2>
+                        <p class="text-gray-600 mb-6">成功完成 ¥${gameState.goal} 的营业目标！</p>
+                        <button id="next-day-button" class="game-title w-full bg-amber-600 text-white text-2xl py-3 rounded-lg shadow-lg hover:bg-amber-700 transition-all duration-200">迎接下一天</button>
+                    `;
+                    modalContent.innerHTML = contentHTML;
+                    document.getElementById('next-day-button').addEventListener('click', startNextDay);
+                } else {
+                    gameState.isGameOver = true;
+                    contentHTML = `
+                        <h2 class="game-title text-4xl text-red-700 mb-2">今日倒闭！</h2>
+                        <p class="text-gray-600 mb-6">可惜，没能完成 ¥${gameState.goal} 的营业目标...</p>
+                        <button id="restart-button" class="game-title w-full bg-amber-600 text-white text-2xl py-3 rounded-lg shadow-lg hover:bg-amber-700 transition-all duration-200">东山再起</button>
+                    `;
+                    modalContent.innerHTML = contentHTML;
+                    document.getElementById('restart-button').addEventListener('click', startGame);
+                }
+            }
+
+            function showItemSelection() {
+                modalContainer.classList.remove('hidden');
+                let choicesHTML = '';
+                const allItems = {...SYMBOLS, ...PERKS};
+                const availableChoices = Object.keys(allItems).filter(id => {
+                    const item = allItems[id];
+                    if (item.type === '增益' && gameState.activePerks.find(p => p.id === id)) {
+                        return false;
+                    }
+                    return true;
+                });
+
+                if (availableChoices.length === 0) {
+                    showMessage('你已经解锁了所有好东西！', 'good');
+                    modalContainer.classList.add('hidden');
+                    if (gameState.spins <= 0) endDay();
+                    else spinButton.disabled = false;
+                    return;
+                }
+                
+                const choiceCount = gameState.activePerks.find(p => p.id === 'caidan') ? 4 : 3;
+                const choices = [];
+                while(choices.length < choiceCount && availableChoices.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * availableChoices.length);
+                    choices.push(availableChoices.splice(randomIndex, 1)[0]);
+                }
+
+                choices.forEach(id => {
+                    const item = allItems[id];
+                    const canAfford = gameState.revenue >= item.cost;
+                    const disabledClass = canAfford ? '' : 'disabled';
+                    choicesHTML += `
+                        <div class="choice-card bg-white p-3 rounded-lg shadow-lg transition-all duration-200 text-center ${disabledClass}" data-id="${id}">
+                            <div class="text-5xl mb-2">${item.emoji}</div>
+                            <h3 class="font-bold text-base text-amber-900">${item.name}</h3>
+                            <p class="text-xs text-gray-500 mb-1">[${item.type}]</p>
+                            <p class="font-bold text-red-600 text-sm mb-2">费用: ¥${item.cost}</p>
+                            <p class="text-xs text-gray-700 h-12">${item.description}</p>
+                        </div>
+                    `;
+                });
+
+                modalContent.innerHTML = `
+                    <h2 class="game-title text-3xl text-amber-800 mb-1">新货到了！</h2>
+                    <p class="text-gray-600 mb-4">选择一个加入你的菜单吧！</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">${choicesHTML}</div>
+                `;
+                
+                document.querySelectorAll('.choice-card:not(.disabled)').forEach(card => {
+                    card.addEventListener('click', (e) => selectItem(e.currentTarget.dataset.id));
+                });
+            }
+            
+            function selectItem(id) {
+                const item = {...SYMBOLS, ...PERKS}[id];
+                if (gameState.revenue < item.cost) {
+                    showMessage('钱不够！', 'bad');
+                    return;
+                }
+
+                gameState.revenue -= item.cost;
+                
+                if (item.type === '增益') {
+                    gameState.activePerks.push(item);
+                } else {
+                    if (!gameState.playerSymbols.includes(id)) {
+                        gameState.playerSymbols.push(id);
+                    }
+                }
+                
+                modalContainer.classList.add('hidden');
+                
+                if (gameState.spins <= 0) {
+                    endDay();
+                } else {
+                    spinButton.disabled = false;
+                }
+                updateUI();
+            }
+
+            function updateUI() {
+                dayCounter.textContent = gameState.day;
+                spinsLeftDisplay.textContent = gameState.spins;
+                revenueDisplay.textContent = `¥${Math.round(gameState.revenue)} / ¥${gameState.goal}`;
+                const currentSpinCost = Math.max(0, gameState.spinCost - (gameState.activePerks.find(p => p.id === 'chengbenjieyue') ? 1 : 0));
+                spinButton.textContent = `开一炉 (¥${currentSpinCost})`;
+                
+                if(gameState.revenue < gameState.goal) {
+                    revenueDisplay.classList.remove('text-green-600');
+                    revenueDisplay.classList.add('text-amber-900');
+                } else {
+                    revenueDisplay.classList.remove('text-amber-900');
+                    revenueDisplay.classList.add('text-green-600');
+                }
+
+                perksList.innerHTML = gameState.activePerks.map(p => `<span class="text-2xl" title="${p.name}">${p.emoji}</span>`).join(' ');
+            }
+
+            function showMessage(msg, type = 'good') {
+                messageBox.innerHTML = ''; 
+                const msgElement = document.createElement('div');
+                msgElement.textContent = msg;
+                messageBox.appendChild(msgElement);
+
+                messageBox.className = 'text-center h-auto min-h-[1.5rem] mb-2 font-bold transition-opacity duration-300';
+                if (type === 'good') {
+                    msgElement.classList.add('text-green-600');
+                } else {
+                    msgElement.classList.add('text-red-600', 'shake-animation');
+                }
+                
+                messageBox.style.opacity = 1;
+                setTimeout(() => {
+                    messageBox.style.opacity = 0;
+                    msgElement.classList.remove('shake-animation');
+                }, 1500);
+            }
+
+            spinButton.addEventListener('click', handleSpin);
+            startGameButton.addEventListener('click', startGame);
+        });
+    </script>
+</body>
+</html>
