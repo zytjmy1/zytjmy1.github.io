@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+* {
+    font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+html, body {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+li {
+    margin-left: 30px;
+}
+
+.pagination li {
+    margin-left: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a img {
+    border: 0px;
+}
+
+.clear {
+    clear: both;
+}
+
+.topaction {
+    margin: 0 auto;
+    position: relativel;
+    width: 1000px;
+    text-align: left;
+    background: #FFF;
+    height: 30px
+}
+
+.topaction span {
+    float: right;
+    margin-left: 6px;
+    margin-right: 6px
+}
+
+.topaction span a {
+    color: #000099;
+    font-size: 12px
+}
+
+#bottom iframe {
+    width: 260px;
+}
+
+#bottom {
+    text-align: center;
+}
+
+#bottom span[style='color:red;'] {
+    font-size: 12px;
+}
+
+.footer-box {
+    margin-top: 10px;
+    padding: 10px;
+    padding-bottom: 0;
+    color: #333;
+}
+
+.alert-box {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.alert-box .title {
+    width: 50px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: red;
+}
+
+.alert-box .content {
+    padding: 10px;
+    width: 520px;
+    font-size: 14px;
+}
+
+.info-box {
+    background-color: rgb(238, 238, 238);
+    margin: 0px -10px;
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info-box .left {
+    border-left: 3px solid #6bb228;
+    padding-left: 10px;
+}
+
+.info-box .left #updateTime {
+    font-size: 20px;
+    font-weight: 600;
+    color: #999;
+}
+
+.info-box .right {
+    text-align: right;
+}
+
+.info-box .right span {
+    margin-left: 10px;
+}

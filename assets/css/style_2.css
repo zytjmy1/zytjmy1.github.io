@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+body {
+    background: url(../img/style_2/body_bg.jpg) repeat-x 0 30px;
+    font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+
+    /* font-family: "宋体"; */
+    font-size: 13px;
+    line-height: 22px;
+}
+
+/*盒子*/
+#container {
+    margin: 0px auto;
+    position: relativel;
+    width: 1000px;
+    text-align: left;
+    background: #FFFFFF;
+}
+
+/*顶部*/
+#top {
+    width: 1000px;
+    height: 153px;
+    background: url(../img/style_2/bg.jpg) no-repeat;
+}
+
+/*LOGO*/
+#logo {
+    width: 340px;
+    height: 97px;
+}
+
+/*搜索栏*/
+#search {
+    width: 600px;
+    float: right;
+    height: 110px;
+    line-height: 23px;
+    display: inline;
+    margin: 5px 10px 0 0;
+}
+
+#search a {
+    color: #FFF;
+}
+
+.search_text {
+    width: 150px;
+    height: 16px;
+    padding: 1px 0;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 14px;
+    border: 1px solid #E3E3E3;
+    border-right: none;
+}
+
+.search_but {
+    vertical-align: top;
+    border: none;
+}
+
+/*导航*/
+#lead_1 {
+    width: 990px;
+    clear: both;
+}
+
+#leader {
+    margin-top: 20px;
+}
+
+#leader li {
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    margin-left: 1px;
+    display: block;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 0;
+}
+
+#leader li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+#leader li a:hover {
+    text-decoration: underline;
+}
+
+#leader li a#current {
+    font-weight: bolder;
+    color: #FFFFD9;
+}
+
+/*中间*/
+#middle {
+    width: 1000px;
+    clear: both;
+}
+
+/*底部*/
+#bottom {
+    clear: both;
+    margin-top: 13px;
+    padding: 10px;
+    width: 980px;
+    font-family: Arial;
+    color: #999999;
+}
+
+#bottom a {
+    color: #999999;
+}
+
+/*拖动控件*/
+.mo {
+    height: auto;
+    border: 1px solid #CCC;
+    margin-bottom: 5px;
+    background: #FFF;
+    border-radius: 2px;
+}
+
+.mo .drag {
+    /* background: url(../img/style_2/lan_head.jpg) repeat-x; */
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    color: #000;
+    font-weight: bold;
+    background-color: rgb(224, 224, 224);
+}
+
+.mo .nr {
+    margin: 2px;
+    background: #FFF;
+    padding: 3px;
+}
+
+.mo .onclickDIV {
+    float: right;
+    padding: 3px;
+    width: 140px;
+    height: 30px;
+    background: url(../img/style_2/lan_head.jpg) repeat-x;
+}
+
+/*可拖动DIV的按钮*/
+.dragBottom {
+    float: right;
+    cursor: pointer;
+    font-size: 150%;
+    display: block;
+    padding:5%;
+}
+
+.dragBottom img {
+    width: 16px;
+}
+
+
+#search .sitenameurl {
+
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
+    height: 26px;
+    line-height: 20px;
+    position: absolute;
+    text-align: left;
+    padding-left: 4px;
+    top: 60px;
+    width: 480px;
+    z-index: 1;
+    opacity: 1;
+}
